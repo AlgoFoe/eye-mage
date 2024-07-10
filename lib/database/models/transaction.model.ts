@@ -1,4 +1,4 @@
-import { Schema, model, models } from "mongoose";
+import { Schema, model, models } from 'mongoose'
 
 const TransactionSchema = new Schema({
   createdAt: {
@@ -22,10 +22,11 @@ const TransactionSchema = new Schema({
   },
   buyer: {
     type: Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
   },
-});
+})
 
-const Transaction = models?.Transaction || model("Transaction", TransactionSchema);
+const Transaction =
+  models?.Transaction || model('Transaction', TransactionSchema)
 
-export default Transaction;
+export default Transaction
